@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Deep Learning IndabaX Uganda | 2024</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Event and Conference Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Eventre HTML Template v1.0">
+  
+  <!-- PLUGINS CSS STYLE -->
+  <!-- Bootstrap -->
+  <link href="plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="plugins/font-awsome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Magnific Popup -->
+  <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <!-- Slick Carousel -->
+  <link href="plugins/slick/slick.css" rel="stylesheet">
+  <link href="plugins/slick/slick-theme.css" rel="stylesheet">
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/modelbox.css"> -->
+
+  <!-- FAVICON -->
+  <link href="images/favicon.png" rel="shortcut icon">
+<style>
+	.popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 5%;
+    border: 1px solid #ffffff;
+	box-shadow: 1px 2px 23px #000;
+    z-index: 9999;
+	border-radius: 12px;
+	opacity: 0.99; /* Start with 0 opacity */
+    transition: opacity 0.3s ease-in-out; /* Add transition for opacity */
+}
+
+.popup-content {
+    text-align: left;
+}
+
+.popup-content p{
+	font-size: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+	font-size: 30px;
+}
+
+.popup-content a{
+	background: #000000;
+	border-radius: 7px;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+.table-4{
+	background: #ffffff;
+	align-items: center;
+	justify-content: center;
+}
+.table-4 p{
+	color: rgb(83, 74, 63);
+	font-size: larger;
+	text-align: center;
+	margin: 25px 0;
+	text-transform: uppercase;
+}
+.table-4 table{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.table-4 table th{
+	font-size: 24px;
+	padding: 20px;
+	color: #fff;
+	font-weight: lighter;
+}
+table, th, td {
+	border: 1px solid rgb(143, 137, 137);
+	border-collapse: collapse;
+}
+th {
+	background-color: rgb(255, 115, 0);
+	text-align: left;
+	padding: 5px;
+}
+tr{
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s ease-in;
+}
+td{
+	padding: 25px;
+}
+tr:hover{
+  box-shadow: 0px 0px 30px 0px rgba(11, 29, 66, 0.15);
+  transform: scale(1.01);
+}
+
+
+.button {
+display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff0000; /* Red background color */
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  border-radius: 4px;
+   margin-bottom: 10px;
+   }
+
+
+.countdown-container {
+  display: block;
+  width: 100%;
+  /* border: 1px solid red; */
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%); */
+  max-width: 70%;
+  /* justify-content: space-between; */
+}
+
+.days-container,
+.hours-container,
+.minutes-container, 
+.seconds-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid rgba(255, 1, 1, 0.9);
+  width: 90px;
+  height: 90px;
+  /* padding: 5px; */
+  border-radius: 50%;
+  /* border: 1px solid rgb(255, 255, 255); */
+  margin: 5px 0;
+  box-shadow: 4px 43px 23px #000;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 2.0em; 
+  font-weight: bold;
+  /* margin: 10px 0; */
+}
+
+
+.days-label,
+.hours-label,
+.minutes-label,
+.seconds-label {
+  text-transform: uppercase;
+  /* margin-bottom: 5px; */
+  color: #000000;
+  /* font-weight: bold; */
+}
+
+@media (max-width: 8000px) {
+  
+  .countdown-container {
+    max-width: 90%;
+  }
+  
+  .days-container,
+  .hours-container,
+  .minutes-container, 
+  .seconds-container {
+    font-size: 0.8em;
+    width: 100px;
+    /* height: 100px; */
+  }
+}
+
+
+
+</style>
+
+</head>
+
+<body class="body-wrapper">
+
+
+<!--========================================
+=            Navigation Section            =
+=========================================-->
+<nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
+  <div class="container-fluid p-0">
+    <!-- logo -->
+    <a style=" padding: 5px;"  class="navbar-brand" href="index.html">
+      <img style="width: 150px; margin: 0; " src="images/logo.png" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+		<li class="nav-item">
+          <a class="nav-link" href="index.html">Home
+            <span>|</span>          </a>        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="speakers.html">Speakers
+            <span>|</span>          </a>        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedule.html">Schedule<span>|</span></a>        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sponsors.html">Sponsors<span>|</span></a>        </li>
+		  <li class="nav-item">
+          <a class="nav-link" href="hackathon.html">Hackathon<span>|</span></a>        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#!" data-toggle="dropdown">Archives <i class="fa fa-angle-down"></i><span>|</span>          </a>
+          <!-- Dropdown list -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./past/index.html">Past Events</a></li>
+            <li><a class="dropdown-item" href="index2022.html">Indaba 2022</a></li>
+			<li><a href="index2023.html" class="dropdown-item">Indaba 2023</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </div>
+<!-- Popup container -->
+<div id="popup" class="popup">
+	<div class="popup-content">
+		<span class="close" onclick="closePopup()">&times;</span>
+		<p>Hurry! Only a few spots left! Reserve your spot now and be part of the groundbreaking IndabaX Uganda 2024 event. Secure your place in shaping the future of AI and machine learning.</p>
+		<a href="http://bit.ly/3K6pKH4" target="_blank" class="btn btn-white-md">Apply Now</a> </div>
+	</div>
+</div>
+
+<section class="banner bg-banner-one overlay">
+	<center>
+		<h1 style="text-shadow: 5px 3px 5px #000000;" >IndabaX Uganda 2024</h1>
+	</center>
+	<div class="mycontainer">
+		
+	  <div style=" display: flex;" class="row">
+		
+
+	    <div style="display: grid; grid-template-columns: 75% 25%;" class="col-lg-5">
+          <!-- Content Block -->
+            
+			<div >
+				<div class="block">
+				
+					<h4 style="color: #fff;" >Conference</h4>
+				   
+					  <div style="background-color: #d8d8d8; width: 85%; padding: 0 2%;">
+				   <h4>AUGUST | 02 | 2024</h3> 
+				   
+				   </div> 
+				   </div>
+				
+					 <div class="block">
+				  <h4 style="color: #fff;" >Hackathon</h4> 
+				 
+	   
+					  <div style="background-color: #d8d8d8; width: 85%; padding: 0 2%;">
+				   <h4>JULY | 31 | 2024</h4> 
+				 </div> 
+				 <a href="hackathon.html" target="_blank" class="button">Learn More</a>
+				   </div>
+					 <br><br> 
+				
+					 <div class="block">
+				  <h4 style="color: #fff;" >Virtual tutorials </h4>
+					  <div style="background-color: #d8d8d8; width: 85%; padding: 0 2%;">
+				   <h4>JULY | 29,30 | 2024</h4> 
+				   </div>
+				   
+				   </div>
+			</div>
+			<section class="countdown-container">
+  
+				<div class="days-container">
+				  <div class="days"></div>
+				  <div class="days-label">days</div>
+				</div>
+				
+				<div class="hours-container">
+				  <div class="hours"></div>
+				  <div class="hours-label">hours</div>
+				</div>
+				
+				<div class="minutes-container">
+				  <div class="minutes"></div>
+				  <div class="minutes-label">minutes</div>
+				</div>
+				
+				<div class="seconds-container">
+				  <div class="seconds"></div>
+				  <div class="seconds-label">seconds</div>
+				</div>
+				
+			  </section>
+		</div>
+		<div class="col-lg-7">
+			<div class="upper">
+				<span style="color: white; font-weight:bold; ">THEME</span>
+	  		<br>
+			<div class="block">
+		
+				<div>
+				<h1 style="font-size:40px; text-align:left;" >Multidisciplinarity of AI in growing the community</h1>
+				<br>
+				<a href="http://bit.ly/3K6pKH4" target="_blank" class="btn btn-white-md">Apply Now</a> </div>
+
+				<div> <br>
+					<p>
+						Ready to dive into the future of AI and machine learning? Don't miss out on this transformative event! Secure your spot now and join us in shaping the next frontier of technology at IndabaX Uganda 2024. Apply today and be part of the revolution!
+					</p>
+				</div>
+			</div>
+			</div>
+			<!-- <div class="lower"> -->
+				
+		</div>
+		
+		 <br><br><br><br>
+		 <br><br>
+		
+        
+	  </div>
+	</div>
+</section>
+	
+<!--====  End of Banner  ====-->
+
+<!--===========================
+=            About            =
+============================-->
+
+<section class="section about">
+	<div style=" margin: 0; padding: 0; min-width: 90%; position: relative; left: 50%; transform: translateX(-50%);" class="container container-2">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 align-self-center">
+				<div class="image-block bg-about">
+					<img class="img-fluid" src="images/speakers/featured-speaker.jpg" alt="">
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-6 align-self-center">
+				<div class="content-block">
+					<h2>About <span class="alternate">Deep Learning IndabaX Uganda</span></h2>
+					<div class="description-one">
+						<p>
+							Our mission is to Strengthen Ugandan Machine Learning and AI by building communities, creating leadership, and recognising excellence in research and applications by Ugandan innovators.
+
+						</p>
+					</div>
+					<div class="description-two">
+						<p>Your support funds the Deep Learning IndabaX Uganda’s mission to Strengthen Ugandan Machine Learning and AI, by enabling us to build communities, create leadership and recognise excellence. The Deep Learning IndabaX Uganda is a nonprofit organisation registered in Uganda as a company limited by guarantee</p>
+					</div>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<!-- <a href="#" class="btn btn-main-md">Buy ticket</a>-->
+						</li>
+						<li class="list-inline-item">
+						<!--	<a href="#" class="btn btn-transparent-md">Read more</a> -->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of About  ====-->
+
+<!--==============================
+=            Speakers            =
+===============================-->
+
+<section style="" class="section speakers bg-speaker overlay-lighter">
+	<div style=" width: 100%; margin: 0; padding: 0; min-width: 90%; position: relative; left: 50%; transform: translateX(-50%);" class="container container-2">
+		<div class="row">
+			<div class="col-12">
+				<!-- Section Title -->
+				<div class="section-title white">
+					<h3>Organizing <span class="alternate">Committee</span></h3>
+					<p>Meet our dedicated Organizing Committee members leading the way!</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 1 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-one.jpg" alt="speaker" class="img-fluidsgu">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								 <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Bruno Ssekiwere</a></h5>
+						<p>Director | Team Lead</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 2 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-two.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Jean Amukwatse</a></h5>
+						<p>General Overseere</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 3 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-three.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Eugene Swinnerstone</a></h5>
+						<p>General Overseer</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 4 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-four.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								
+							</ul>
+							
+						</div>
+						
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Patience Atukunda</a></h5>
+						<p>Chair | Sponsorship Committee</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 4 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-four.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Samiiha Nalwooga</a></h5>
+						<p>Chair | Applications and Selections</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 5 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-five.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Dorothy kabarozi </a></h5>
+						<p>Chair | Programme Committee</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 1 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-six.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5 style="" ><a href="single-speaker.html">Desire Regina Nakabuuka</a></h5>
+						<p>Chair | Communications & Publicity </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 7 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-five.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Denise Nsubuga</a></h5>
+						<p>Chair | Welfare and Events Management</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">
+				<!-- Speaker 8 -->
+				<div class="speaker-item">
+					<div class="image">
+						<img src="images/speakers/speaker-six.jpg" alt="speaker" class="img-fluid">
+						<div class="primary-overlay"></div>
+						<div class="socials">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content text-center">
+						<h5><a href="single-speaker.html">Hewitt Tusiime</a></h5>
+						<p>Chair | Engagement and Partnership</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Speakers  ====-->
+
+<!--==============================
+=            Schedule            =
+===============================-->
+
+<section class="section schedule">
+	<div class="container-2">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3>Event <span class="alternate">Schedule</span></h3>
+					<p style="margin:  2px 10%;" >Join us for five days of AI exploration at IndabaX Uganda 2024: Hackathon on 29/07/2024, Tutorials on 30/07/2024, Workshops on 31/07/2024, Conference on 01/08/2024 (Parallel Sessions: Ecology and AI, Astrophysics and AI), and Poster Presentations on 02/08/2024</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="schedule-tab">
+					<ul  class="nav nav-pills text-center">
+					  <li class="nav-item">
+					    <a class="nav-link active" href="#nov20" data-toggle="pill">
+					    	Day-01
+					    	<span>29 July 2024 | <b>Tutorials</b></span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov21" data-toggle="pill">
+							Day-02
+					    	<span>30 July 2024 | <b>Tutorials</b></span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov22" data-toggle="pill">
+							Day-03
+					    	<span>31 July 2024 | <b>Hackathon</b></span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov23" data-toggle="pill">
+							Day-04
+					    	<span>01 August 2024 | <b>Workshops</b></span>
+					    </a>
+					  </li><li class="nav-item">
+					    <a class="nav-link" href="#nov24" data-toggle="pill">
+							Day-05
+					    	<span>02 August 2024 | <b>Conference</b></span>
+					    </a>
+					  </li>
+					</ul>
+				</div>
+				<div class="schedule-contents bg-schedule">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active schedule-item" id="nov20">
+					  	<!-- Headings -->
+					  	<div class="table-4">
+							<p>TUTORIALS</p>
+							<table>
+								<thead>
+								<tr>
+									<th>Time</th>
+									<th>Ecology and AI</th>
+									<th>Astrophysics and AI</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr class="schedule-details">
+									<td> <b>09:00-10:30</b></td>
+									<td>Introductory talk to AI and Ecology <b>(The future of Artificial intelligence in astronomy)</b></td>
+									<td>Introductory talk to AI & astrophysics</td>
+								</tr>
+								<tr>
+									<td><b>10:30-11:15</b></td>
+									<td colspan="2"><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td colspan="2"></td>
+									<td><b>Applications of machine learning and artificial intelligence to:</b></td>
+								</tr>
+								<tr>
+									<td><b>11:15-12:00</b></td>
+									<td>Animal Behaviour:</td>
+									<td rowspan="2" >The Gaia space telescope <b>(building an ultra-precise catalogue of over one billion stars)</b></td>
+								</tr>
+								<tr>
+									<td><b>12:00-12:45</b></td>
+									<td>Behavioural Ecology:</td>
+									
+								</tr>
+								<tr>
+									<td><b>12:45-14:00</b></td>
+									<td colspan="2" ><b>Lunch</b></td>
+								</tr>
+								<tr>
+									<td><b>14:00-14:45</b></td>
+									<td>Animal Tracking (Animal movement and migrations):</td>
+									<td rowspan="2">The Atacama Large Millimetre/sub-millimetre Array (the best instrument to study the 'cold' universe)</td>
+								</tr>
+								<tr>
+									<td><b>14:45-15:30</b></td>
+									<td>Al in Agriculture:</td>
+									
+								</tr>
+								<tr>
+									<td><b>15:30-16:00</b></td>
+									<td colspan="2" ><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td><b>16:00-16:45</b></td>
+									<td>Wildlife Management or Ecosystems Management:</td>
+									<td>The Square Kilometre Array (currently being built in South Africa, soon to be the world's biggest ICT project)</td>
+								</tr>
+								<tr>
+									<td><b>16:45-17:30</b></td>
+									<td>Satellite Monitoring</td>
+									<td>DARA Project Talk</td>
+								</tr>
+								<tr>
+									<td><b>17:30-19:00</b></td>
+									<td><b>Poster Presentations</b></td>
+								</tr>
+								</tbody>
+							</table>
+							</div>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="nov21">
+					  	<!-- Headings -->
+					  	<div class="table-4">
+							<p>TUTORIALS</p>
+							<table>
+								<thead>
+								<tr>
+									<th>Time</th>
+									<th>Ecology and AI</th>
+									<th>Astrophysics and AI</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr class="schedule-details">
+									<td> <b>09:00-10:30</b></td>
+									<td>Introductory talk to AI and Ecology <b>(The future of Artificial intelligence in astronomy)</b></td>
+									<td>Introductory talk to AI & astrophysics</td>
+								</tr>
+								<tr>
+									<td><b>10:30-11:15</b></td>
+									<td colspan="2"><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td colspan="2"></td>
+									<td><b>Applications of machine learning and artificial intelligence to:</b></td>
+								</tr>
+								<tr>
+									<td><b>11:15-12:00</b></td>
+									<td>Animal Behaviour:</td>
+									<td rowspan="2" >The Gaia space telescope <b>(building an ultra-precise catalogue of over one billion stars)</b></td>
+								</tr>
+								<tr>
+									<td><b>12:00-12:45</b></td>
+									<td>Behavioural Ecology:</td>
+									
+								</tr>
+								<tr>
+									<td><b>12:45-14:00</b></td>
+									<td colspan="2" ><b>Lunch</b></td>
+								</tr>
+								<tr>
+									<td><b>14:00-14:45</b></td>
+									<td>Animal Tracking (Animal movement and migrations):</td>
+									<td rowspan="2">The Atacama Large Millimetre/sub-millimetre Array (the best instrument to study the 'cold' universe)</td>
+								</tr>
+								<tr>
+									<td><b>14:45-15:30</b></td>
+									<td>Al in Agriculture:</td>
+									
+								</tr>
+								<tr>
+									<td><b>15:30-16:00</b></td>
+									<td colspan="2" ><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td><b>16:00-16:45</b></td>
+									<td>Wildlife Management or Ecosystems Management:</td>
+									<td>The Square Kilometre Array (currently being built in South Africa, soon to be the world's biggest ICT project)</td>
+								</tr>
+								<tr>
+									<td><b>16:45-17:30</b></td>
+									<td>Satellite Monitoring</td>
+									<td>DARA Project Talk</td>
+								</tr>
+								<tr>
+									<td><b>17:30-19:00</b></td>
+									<td><b>Poster Presentations</b></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="nov22">
+					  	<!-- Headings -->
+					  	<div class="table-4">
+							<p>HACKATHON</p>
+							<table>
+								<thead>
+								<tr>
+									<th>Time</th>
+									<th>Ecology and AI</th>
+									<th>Astrophysics and AI</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr class="schedule-details">
+									<td> <b>09:00-10:30</b></td>
+									<td>Introductory talk to AI and Ecology <b>(The future of Artificial intelligence in astronomy)</b></td>
+									<td>Introductory talk to AI & astrophysics</td>
+								</tr>
+								<tr>
+									<td><b>10:30-11:15</b></td>
+									<td colspan="2"><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td colspan="2"></td>
+									<td><b>Applications of machine learning and artificial intelligence to:</b></td>
+								</tr>
+								<tr>
+									<td><b>11:15-12:00</b></td>
+									<td>Animal Behaviour:</td>
+									<td rowspan="2" >The Gaia space telescope <b>(building an ultra-precise catalogue of over one billion stars)</b></td>
+								</tr>
+								<tr>
+									<td><b>12:00-12:45</b></td>
+									<td>Behavioural Ecology:</td>
+									
+								</tr>
+								<tr>
+									<td><b>12:45-14:00</b></td>
+									<td colspan="2" ><b>Lunch</b></td>
+								</tr>
+								<tr>
+									<td><b>14:00-14:45</b></td>
+									<td>Animal Tracking (Animal movement and migrations):</td>
+									<td rowspan="2">The Atacama Large Millimetre/sub-millimetre Array (the best instrument to study the 'cold' universe)</td>
+								</tr>
+								<tr>
+									<td><b>14:45-15:30</b></td>
+									<td>Al in Agriculture:</td>
+									
+								</tr>
+								<tr>
+									<td><b>15:30-16:00</b></td>
+									<td colspan="2" ><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td><b>16:00-16:45</b></td>
+									<td>Wildlife Management or Ecosystems Management:</td>
+									<td>The Square Kilometre Array (currently being built in South Africa, soon to be the world's biggest ICT project)</td>
+								</tr>
+								<tr>
+									<td><b>16:45-17:30</b></td>
+									<td>Satellite Monitoring</td>
+									<td>DARA Project Talk</td>
+								</tr>
+								<tr>
+									<td><b>17:30-19:00</b></td>
+									<td><b>Poster Presentations</b></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="nov23">
+						<!-- Headings -->
+						<div class="table-4">
+						<p>WORKSHOPS | Parallel Sessions</p>
+						<table>
+							<thead>
+							<tr>
+								<th>Time</th>
+								<th>Ecology and AI</th>
+								<th>Astrophysics and AI</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr class="schedule-details">
+								<td> <b>09:00-10:30</b></td>
+								<td>Introductory talk to AI and Ecology <b>(The future of Artificial intelligence in astronomy)</b></td>
+								<td>Introductory talk to AI & astrophysics</td>
+							</tr>
+							<tr>
+								<td><b>10:30-11:15</b></td>
+								<td colspan="2"><b>Coffee Break</b></td>
+							</tr>
+							<tr>
+								<td colspan="2"></td>
+								<td><b>Applications of machine learning and artificial intelligence to:</b></td>
+							</tr>
+							<tr>
+								<td><b>11:15-12:00</b></td>
+								<td>Animal Behaviour:</td>
+								<td rowspan="2" >The Gaia space telescope <b>(building an ultra-precise catalogue of over one billion stars)</b></td>
+							</tr>
+							<tr>
+								<td><b>12:00-12:45</b></td>
+								<td>Behavioural Ecology:</td>
+								
+							</tr>
+							<tr>
+								<td><b>12:45-14:00</b></td>
+								<td colspan="2" ><b>Lunch</b></td>
+							</tr>
+							<tr>
+								<td><b>14:00-14:45</b></td>
+								<td>Animal Tracking (Animal movement and migrations):</td>
+								<td rowspan="2">The Atacama Large Millimetre/sub-millimetre Array (the best instrument to study the 'cold' universe)</td>
+							</tr>
+							<tr>
+								<td><b>14:45-15:30</b></td>
+								<td>Al in Agriculture:</td>
+								
+							</tr>
+							<tr>
+								<td><b>15:30-16:00</b></td>
+								<td colspan="2" ><b>Coffee Break</b></td>
+							</tr>
+							<tr>
+								<td><b>16:00-16:45</b></td>
+								<td>Wildlife Management or Ecosystems Management:</td>
+								<td>The Square Kilometre Array (currently being built in South Africa, soon to be the world's biggest ICT project)</td>
+							</tr>
+							<tr>
+								<td><b>16:45-17:30</b></td>
+								<td>Satellite Monitoring</td>
+								<td>DARA Project Talk</td>
+							</tr>
+							<tr>
+								<td><b>17:30-19:00</b></td>
+								<td><b>Poster Presentations</b></td>
+							</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>
+					<div class="tab-pane fade schedule-item" id="nov24">
+						<!-- Headings -->
+						<div class="table-4">
+							<p>CONFERENCE</p>
+							<table>
+								<thead>
+								<tr>
+									<th>Time</th>
+									<th>Ecology and AI</th>
+									<th>Astrophysics and AI</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr class="schedule-details">
+									<td> <b>09:00-10:30</b></td>
+									<td>Introductory talk to AI and Ecology <b>(The future of Artificial intelligence in astronomy)</b></td>
+									<td>Introductory talk to AI & astrophysics</td>
+								</tr>
+								<tr>
+									<td><b>10:30-11:15</b></td>
+									<td colspan="2"><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td colspan="2"></td>
+									<td><b>Applications of machine learning and artificial intelligence to:</b></td>
+								</tr>
+								<tr>
+									<td><b>11:15-12:00</b></td>
+									<td>Animal Behaviour:</td>
+									<td rowspan="2" >The Gaia space telescope <b>(building an ultra-precise catalogue of over one billion stars)</b></td>
+								</tr>
+								<tr>
+									<td><b>12:00-12:45</b></td>
+									<td>Behavioural Ecology:</td>
+									
+								</tr>
+								<tr>
+									<td><b>12:45-14:00</b></td>
+									<td colspan="2" ><b>Lunch</b></td>
+								</tr>
+								<tr>
+									<td><b>14:00-14:45</b></td>
+									<td>Animal Tracking (Animal movement and migrations):</td>
+									<td rowspan="2">The Atacama Large Millimetre/sub-millimetre Array (the best instrument to study the 'cold' universe)</td>
+								</tr>
+								<tr>
+									<td><b>14:45-15:30</b></td>
+									<td>Al in Agriculture:</td>
+									
+								</tr>
+								<tr>
+									<td><b>15:30-16:00</b></td>
+									<td colspan="2" ><b>Coffee Break</b></td>
+								</tr>
+								<tr>
+									<td><b>16:00-16:45</b></td>
+									<td>Wildlife Management or Ecosystems Management:</td>
+									<td>The Square Kilometre Array (currently being built in South Africa, soon to be the world's biggest ICT project)</td>
+								</tr>
+								<tr>
+									<td><b>16:45-17:30</b></td>
+									<td>Satellite Monitoring</td>
+									<td>DARA Project Talk</td>
+								</tr>
+								<tr>
+									<td><b>17:30-19:00</b></td>
+									<td><b>Poster Presentations</b></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!--====  End of Schedule  ====-->
+
+<!--==================================
+=            Registration            =
+===================================-->
+
+<section class="registration">
+	<div class="container-fuild p-0">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 p-0">
+				<div class="service-block bg-service overlay-primary text-center">
+					<div class="row no-gutters">
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-microphone"></i>
+								<h5>25 Speakers</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-flag"></i>
+								<h5>300 + Seats</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-ticket"></i>
+								<h5>150 tickets</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-calendar"></i>
+								<h5>3 Days Event</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 p-0">
+				<div class="registration-block bg-registration overlay-dark">
+					<div class="block">
+						<div class="title text-left">
+							<h3>Apply to Attend <span class="alternate">IndabaX Uganda 2024</span></h3>
+							 <h3>Scan the code
+						</div>
+													<center><img src="images/qr_code.jpg" width="160px" height="160px" alt="QR Code">
+						</center>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Registration  ====-->
+
+<!--==============================
+=            Sponsors            =
+===============================-->
+
+<section class="sponsors section bg-sponsors overlay-white">
+	<div class="container-2">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+				
+				
+				
+				
+				
+				           	<div style="background-color: #d8d8d8; ">
+
+					<h3>Our <span class="alternate">Sponsors</span></h3>
+							</div>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<!-- Title -->
+				<div class="sponsor-title text-center">
+				<h5></h5>
+				</div>
+				<div class="block text-center">
+					<!-- Sponsors image list -->
+					<ul class="list-inline sponsors-list">
+						
+						
+					</ul>
+				</div>
+				<!-- Title -->
+				<div class="sponsor-title text-center">
+				
+				
+				
+				
+				
+				
+				
+					<h5>Platinum Sponsors</h5>
+				</div>
+				<div class="block text-center">
+					<!-- Sponsors image list -->
+					<ul class="list-inline sponsors-list">
+						
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="images/sponsors/SB.jpeg" alt="sponsors-logo" width="500px" height="900px" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="images/sponsors/DLI.png" alt="sponsors-logo" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="images/sponsors/ai_lab.jpg" alt="sponsors-logo" class="img-fluid">
+								
+								
+								</a>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				<!-- Title -->
+				<div class="sponsor-title text-center">
+					<h5>Gold Sponsors</h5>
+				</div>
+				<div class="block text-center">
+					<!-- Sponsors image list -->
+					<ul class="list-inline sponsors-list">
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="images/sponsors/gd.png" alt="sponsors-logo" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="images/sponsors/NICT.jpg" alt="sponsors-logo" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="images/sponsors/aij.jpg" alt="sponsors-logo" width="200px" height="800px" class="img-fluid">
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="sponsor-btn text-center">
+					<a href="#" class="btn btn-main-md">Become a sponsor</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="cta-subscribe bg-subscribe overlay-dark">
+	<div style="margin: 0 5%;" class="container-2">
+		<div class="row">
+			<div class="col-md-6 mr-auto">
+				<!-- Subscribe Content -->
+				<div class="content">
+					<h3>Subscribe to Our <span class="alternate">Newsletter</span></h3>
+					<p>Stay updated with the latest news, events, and announcements. Join our community and be the first to know about upcoming events, speaker announcements, and special offers</p>
+				</div>
+			</div>
+			<div class="col-md-6 ml-auto align-self-center">
+				<!-- Subscription form -->
+				<form action="#" class="row">
+					<div class="col-lg-8 col-md-12">
+						<input type="email" class="form-control main white mb-lg-0" placeholder="Email">
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="subscribe-button">
+							<button class="btn btn-main-md">Subscribe</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Sponsors  ====-->
+
+<!--================================
+=            Google Map            =
+=================================-->
+<section class="map">
+	<!-- Google Map -->
+	<div id="map" data-latitude="0.3286742014886896" data-longitude="32.6147066621755" data-marker="images/icon/marker.png" data-marker-name="IndabaX Uganda"></div>
+	<div class="address-block">
+		<h4>Silver Springs Hotel Bugolobi</h4>
+		<ul class="address-list p-0 m-0">
+			<li><i class="fa fa-home"></i><span>Plot 76A/D Port Bell Road, <br>Kampala, Uganda.</span></li>
+			<li><i class="fa fa-phone"></i><span>+256-758 508421</span></li>
+		</ul>
+		<a href="#" class="btn btn-white-md">Get Direction</a>	</div>
+</section>
+<!--====  End of Google Map  ====-->
+
+<!--============================
+=            Footer            =
+=============================-->
+
+<footer class="footer-main">
+	<div style="margin: 0 5%;" class="container-2">
+	  <div class="row">
+		<div class="col-md-12">
+		  <div class="block text-center">
+			<div class="footer-logo">
+			  <img src="images/logo.png" alt="Deep Learning IndabaX Uganda Logo" class="img-fluid">
+			</div>
+			<ul class="social-links-footer list-inline">
+			  <li class="list-inline-item">
+				<a href="https://facebook.com/indabaxug"><i class="fa fa-facebook"></i></a>
+			  </li>
+			  <li class="list-inline-item">
+				<a href="https://twitter.com/indabaxug"><i class="fa fa-twitter"></i></a>
+			  </li>
+			  <li class="list-inline-item">
+				<a href="https://instagram.com/indabaxug/"><i class="fa fa-instagram"></i></a>
+			  </li>
+			  <li class="list-inline-item">
+				<a href="https://linkedin.com/indabaxug/"><i class="fa fa-linkedin"></i></a>
+			  </li>
+			</ul>
+		  </div>
+  
+		</div>
+	  </div>
+	</div>
+  </footer>
+  <!-- Subfooter -->
+  <footer class="subfooter">
+	<div style="margin:  0 7%;" class="container-2">
+	  <div class="row">
+		<div class="col-md-6 align-self-center">
+		  <div class="copyright-text">
+			<p>Copyright reserved to <a href="index.html"> Deep Learning IndabaX Uganda</a> &copy; 2024
+		  </div>
+		</div>
+		<div class="col-md-6">
+		  <a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
+		</div>
+	  </div>
+	</div>
+</footer>
+
+
+  <!-- JAVASCRIPTS -->
+  <!-- jQuey -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- Shuffle -->
+  <script src="plugins/shuffle/shuffle.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Slick Carousel -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- SyoTimer -->
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <!-- Google Mapl -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/popup.js"></script>
+  <!-- <script src="js/"></script> -->
+
+</body>
+
+</html>
+
+
