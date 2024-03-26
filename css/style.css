@@ -1,9 +1,4 @@
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
+
 
 /*=== MEDIA QUERY ===*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500,700");
@@ -214,8 +209,9 @@ button:hover {
 }
 
 .bg-banner-one {
+  /* background: #000; */
   /* background: url(../images/background/homepage-one-banner.jpg) no-repeat; */
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.83)),url(../images/background/homepage-one-banner.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url(../images/background/homepage-one-banner.jpg);
   background-size: cover;
   background-position: center center;
 }
@@ -1082,23 +1078,29 @@ select.form-control:not([size]):not([multiple]) {
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
-.banner h1 {
+.bg-banner-one h1 {
   text-transform: uppercase;
   font-size: 5.3rem;
   color: #ff6600;
   font-weight: 500;
   text-shadow: 3.5px 6.062px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
+  /* border: 4px solid rgb(102, 64, 8); */
+  text-shadow: 5px 3px 5px #000000;
 }
 @media (max-width: 767px) {
+  .banner{
+    justify-content: center;
+    align-items: center;
+  }
   .banner  h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 400px) {
-  .banner  h1 {
+  /* .bg-banner-one  h1 {
     font-size: 3rem;
-  }
+  } */
 }
 /*  added style */
 @media (max-width: 767px) {
@@ -1201,13 +1203,14 @@ select.form-control:not([size]):not([multiple]) {
   border-radius: 0;
   transform: translate(30px, -30px);
 }
+.content-block{
+  /* border: 1px solid red; */
+  
+}
 @media (max-width: 767px) {
   .about .image-block.two img {
     transform: translate(0, -30px);
   }
-}
-.about .content-block {
-  margin-left: 15px;
 }
 @media (max-width: 767px) {
   .about .content-block {
@@ -1505,7 +1508,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 .schedule .schedule-contents .schedule-item li.schedule-details .block {
   padding: 10px 40px;
-  background: #fff;
+  /* background: #fff; */
   width: 100%;
   transition: 0.2s ease-in;
 }
@@ -1585,8 +1588,9 @@ select.form-control:not([size]):not([multiple]) {
 }
 .schedule.two .schedule-tab ul li.nav-item a.active {
   background: #ff6600;
-  color: #fff;
-  position: relative;
+  color: #ffffff;
+  /* position: relative; */
+  /* border: 4px solid red; */
 }
 .schedule.two .schedule-tab ul li.nav-item a.active span {
   color: #fff;
@@ -1686,7 +1690,7 @@ select.form-control:not([size]):not([multiple]) {
 .schedule.two .schedule-contents .schedule-item li.schedule-details .block {
   text-align: center;
   padding: 0;
-  background: #fff;
+  /* background: #fff; */
   width: 100%;
   transition: 0.2s ease-in;
 }
@@ -3156,7 +3160,7 @@ ul.pagination .active a {
   }
 }
 .about {
-  padding: 120px 0;
+  padding: 120px 2%;
 }
 
 .testimonial .testimonial-item {

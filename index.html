@@ -33,10 +33,10 @@
   <!-- FAVICON -->
   <link href="images/favicon.png" rel="shortcut icon">
 <style>
-	.popup {
+.popup {
     display: none;
     position: fixed;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
@@ -71,6 +71,13 @@
 	color: #fff;
 	font-weight: bold;
 	margin-top: 25px;
+}
+.col-lg-5 .block div{
+	border-radius: 5px;
+}
+.block div h1{
+	font-size: 35px; 
+	text-align: left;
 }
 
 .table-4{
@@ -136,14 +143,173 @@ display: inline-block;
 
 
 .countdown-container {
-  display: block;
   width: 100%;
-  /* border: 1px solid red; */
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%); */
-  max-width: 70%;
-  /* justify-content: space-between; */
+  /* border: 5px solid green; */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.col-lg-5{
+	display: grid; 
+	grid-template-columns: 75% 25%;
+	/* border: 1px solid red; */
+	padding: 0;
+	/* padding: 0; */
+}
+.col-lg-7{
+	/* border: 4px solid green; */
+	display: flex;
+	align-items: center;
+
+}
+.col-lg-5 .left{
+	/* border: 1px solid red; */
+	width: 100%;
+}
+.col-lg-5 .left .block div{
+	background-color: #ffffff; 
+	/* width: 85%;  */
+	padding: 0 2%;
+}
+.dates h4{
+	padding: 5.5% 0;
+}
+
+@media (max-width: 460px) {
+	.bg-banner-one  h1 {
+    font-size: 3rem;
+  }
+	.countdown-container{
+		display: none;
+	}
+	.col-lg-5{ 
+		display: flex;
+		/* border: 2px solid red; */
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+	}
+	.block{
+		/* border: 1px solid dodgerblue; */
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		/* display: flex; */
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+	.block div{
+		/* border: 1px solid red; */
+		width: 100%;
+		margin: 0;
+	}
+	.block h4{
+		text-align: center;
+		font-size: 1.5rem;
+	}
+	.dates h4{
+		font-size: 1.4rem;
+		padding: 5% 0;
+	}
+	.col-lg-5{
+		margin-bottom: 40px;
+	}
+	.block div h1{
+	font-size: 25px; 
+	text-align: center;
+	}
+	.col-lg-7 .upper span{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.col-lg-7 .upper hr{
+		color: #fff;
+		height: 2px;
+		background: #d6c7c7;
+		border-radius: 50%;
+	}
+	/* Pop up */
+	.popup {
+		/* display: none; */
+		border-radius: 7px;
+		width: 100%;
+		top: 25%;
+		/* visibility: hidden; */
+		/* margin: auto; */
+	}
+
+	.popup-content {
+		text-align: left;
+	}
+
+	.popup-content p{
+		font-size: 15px;
+	}
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+
+	.popup-content a{
+		background: #000000;
+		border-radius: 7px;
+		color: #fff;
+		font-weight: bold;
+		margin-top: 25px;
+		font-size: 10px;
+	}
+	.about {
+  		padding: 120px 5%;
+	}
+	
+
+	/* Table */
+	.schedule .schedule-tab ul{
+		/* border: 5px solid red;
+		display: flex;
+		justify-content: space-around; */
+	}
+	.schedule .schedule-tab ul li.nav-item a {
+	font-size: 1rem;
+	padding: 10px 0px;
+	}
+	.schedule .schedule-tab ul li.nav-item a span{
+		font-size: 0.7rem;
+	}
+	
+	.table-4 table{
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.table-4 table th{
+		font-size: 12px;
+		padding: 15px 5px;
+		color: #fff;
+	}
+	table, th, td {
+		border: 1px solid rgb(143, 137, 137);
+		border-collapse: collapse;
+	}
+	td{
+		padding: 5px;
+		font-size: 10px;
+	}
+	.registration-block .title h3{
+		text-align: center;
+	}
+
+
+	
 }
 
 .days-container,
@@ -155,12 +321,9 @@ display: inline-block;
   align-items: center;
   justify-content: center;
   background-color: rgb(255, 255, 255);
-  border: 5px solid rgba(255, 1, 1, 0.9);
   width: 90px;
   height: 90px;
-  /* padding: 5px; */
   border-radius: 50%;
-  /* border: 1px solid rgb(255, 255, 255); */
   margin: 5px 0;
   box-shadow: 4px 43px 23px #000;
 }
@@ -180,16 +343,10 @@ display: inline-block;
 .minutes-label,
 .seconds-label {
   text-transform: uppercase;
-  /* margin-bottom: 5px; */
   color: #000000;
-  /* font-weight: bold; */
 }
 
 @media (max-width: 8000px) {
-  
-  .countdown-container {
-    max-width: 90%;
-  }
   
   .days-container,
   .hours-container,
@@ -254,7 +411,7 @@ display: inline-block;
   </div>
 </nav>
 
-  </div>
+
 <!-- Popup container -->
 <div id="popup" class="popup">
 	<div class="popup-content">
@@ -266,41 +423,51 @@ display: inline-block;
 
 <section class="banner bg-banner-one overlay">
 	<center>
-		<h1 style="text-shadow: 5px 3px 5px #000000;" >IndabaX Uganda 2024</h1>
+		<h1 style="" >IndabaX Uganda 2024</h1>
 	</center>
 	<div class="mycontainer">
 		
 	  <div style=" display: flex;" class="row">
 		
 
-	    <div style="display: grid; grid-template-columns: 75% 25%;" class="col-lg-5">
+	    <div  class="col-lg-5">
           <!-- Content Block -->
             
-			<div >
+			<div class="left" >
 				<div class="block">
 				
 					<h4 style="color: #fff;" >Conference</h4>
 				   
-					  <div style="background-color: #d8d8d8; width: 85%; padding: 0 2%;">
-				   <h4>AUGUST | 02 | 2024</h3> 
+					<div class="dates" >
+				   	<h4>AUGUST | 02 | 2024</h3> 
 				   
 				   </div> 
-				   </div>
+				</div>
+
+				<div class="block">
 				
-					 <div class="block">
-				  <h4 style="color: #fff;" >Hackathon</h4> 
+					<h4 style="color: #fff;" >Workshops</h4>
+				   
+					<div class="dates" >
+				   	<h4>AUGUST | 01 | 2024</h3> 
+				   
+				   </div> 
+				</div>
+				
+				<div class="block">
+				  	<h4 style="color: #fff;" >Hackathon</h4> 
 				 
 	   
-					  <div style="background-color: #d8d8d8; width: 85%; padding: 0 2%;">
-				   <h4>JULY | 31 | 2024</h4> 
-				 </div> 
-				 <a href="hackathon.html" target="_blank" class="button">Learn More</a>
-				   </div>
+					<div class="dates" >
+				   		<h4>JULY | 31 | 2024</h4> 
+				 	</div> 
+				 	<a href="hackathon.html" target="_blank" class="button">Learn More</a>
+				</div>
 					 <br><br> 
 				
 					 <div class="block">
 				  <h4 style="color: #fff;" >Virtual tutorials </h4>
-					  <div style="background-color: #d8d8d8; width: 85%; padding: 0 2%;">
+					  <div class="dates" >
 				   <h4>JULY | 29,30 | 2024</h4> 
 				   </div>
 				   
@@ -328,16 +495,16 @@ display: inline-block;
 				  <div class="seconds-label">seconds</div>
 				</div>
 				
-			  </section>
+			</section>
 		</div>
 		<div class="col-lg-7">
 			<div class="upper">
 				<span style="color: white; font-weight:bold; ">THEME</span>
-	  		<br>
+	  		<hr>
 			<div class="block">
 		
-				<div>
-				<h1 style="font-size:40px; text-align:left;" >Multidisciplinarity of AI in growing the community</h1>
+				<div >
+				<h1 >Multidisciplinarity of AI in growing the community</h1>
 				<br>
 				<a href="http://bit.ly/3K6pKH4" target="_blank" class="btn btn-white-md">Apply Now</a> </div>
 
@@ -366,8 +533,8 @@ display: inline-block;
 =            About            =
 ============================-->
 
-<section class="section about">
-	<div style=" margin: 0; padding: 0; min-width: 90%; position: relative; left: 50%; transform: translateX(-50%);" class="container container-2">
+<section style="border: 1px solid green;" class="section about">
+	<div style="" class=" continer-2">
 		<div class="row">
 			<div class="col-lg-4 col-md-6 align-self-center">
 				<div class="image-block bg-about">
@@ -422,7 +589,7 @@ display: inline-block;
 				<!-- Speaker 1 -->
 				<div class="speaker-item">
 					<div class="image">
-						<img src="images/speakers/speaker-one.jpg" alt="speaker" class="img-fluidsgu">
+						<img src="images/speakers/bruno.png" alt="speaker" class="img-fluidsgu">
 						<div class="primary-overlay"></div>
 						<div class="socials">
 							<ul class="list-inline">
